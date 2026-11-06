@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zero-Cost GAIA Agent</title>
+<style>
+  :root { --bg:#fbfaf7; --fg:#1d1d1f; --muted:#5f6368; --accent:#3b4cca; --card:#ffffff; --line:#e6e3dc; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#141416; --fg:#ececec; --muted:#a1a1aa; --accent:#8b97ff; --card:#1c1c20; --line:#2c2c33; } }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:56px 16px 72px; }
+  h1 { font-size:2.2rem; line-height:1.15; margin:0 0 8px; letter-spacing:-.02em }
+  .lede { color:var(--muted); font-size:1.1rem; margin:0 0 28px }
+  .links { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:36px }
+  .links a { padding:10px 16px; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid var(--line); color:var(--fg); background:var(--card) }
+  .links a.primary { background:var(--accent); border-color:var(--accent); color:#fff }
+  h2 { font-size:1.15rem; margin:36px 0 10px }
+  table { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden }
+  td { padding:10px 14px; border-top:1px solid var(--line); vertical-align:top }
+  tr:first-child td { border-top:0 }
+  td:first-child { color:var(--muted); width:34%; white-space:nowrap }
+  ul { padding-left:20px } li { margin:4px 0 }
+  code { font-size:.92em; background:var(--card); border:1px solid var(--line); padding:1px 5px; border-radius:5px }
+  footer { margin-top:48px; color:var(--muted); font-size:.9rem }
+</style>
+</head>
+<body>
+<main>
+  <h1>Zero-Cost GAIA Agent</h1>
+  <p class="lede">A LangGraph research agent for the GAIA benchmark (Level 1), running only on free-tier Cloudflare Workers AI models.</p>
+  <div class="links">
+    <a class="primary" href="https://github.com/HarshThumar/zero-cost-gaia-agent">View on GitHub</a>
+    <a href="https://huggingface.co/spaces/Harsh5764/zero-cost-gaia-agent/tree/main">Browse code here</a>
+  </div>
+
+  <table>
+    <tr><td>Score</td><td id="score">Pending official submission (course pass mark: 30%)</td></tr>
+    <tr><td>Brain</td><td><code>gpt-oss-120b</code> (free tier)</td></tr>
+    <tr><td>Vision / speech</td><td><code>gemma-4-26b</code> · <code>whisper-large-v3-turbo</code></td></tr>
+    <tr><td>Framework</td><td>LangGraph</td></tr>
+    <tr><td>Model cost</td><td>$0</td></tr>
+  </table>
+
+  <h2>What it can do</h2>
+  <ul>
+    <li>Search the web and read pages, PDFs and historical Wikipedia revisions</li>
+    <li>Read Excel, CSV, Word and code attachments, and run Python for exact calculations</li>
+    <li>Transcribe audio with Whisper and analyse YouTube videos frame by frame</li>
+    <li>Read a chess board from an image, one square at a time, and find the best move with Stockfish</li>
+    <li>Answer each question 3 times and submit the majority answer</li>
+  </ul>
+
+  <h2>Why this Space is static</h2>
+  <p>Hugging Face now needs a paid plan to run Gradio Spaces, so this Space holds the source code only. To run the agent, clone the repo and use <code>uv run python run_local.py</code>, or <code>app.py</code> for the Gradio UI.</p>
+
+  <footer>Final project for the Hugging Face Agents Course (Unit 4).</footer>
+</main>
+</body>
+</html>
