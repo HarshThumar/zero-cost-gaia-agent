@@ -1,13 +1,13 @@
 # Zero-Cost GAIA Agent
 
-A tool-using research agent for the **GAIA benchmark (Level 1)**, built with **LangGraph** and running entirely
+A tool-using research agent that scored **90% (18/20)** on the **GAIA benchmark (Level 1)** course set, built with **LangGraph** and running entirely
 on **free-tier Cloudflare Workers AI models**. Model cost: $0.
 
 Built for the final assignment of the [Hugging Face Agents Course](https://huggingface.co/learn/agents-course) (Unit 4).
 
 | | |
 |---|---|
-| **Score** | _pending official submission_ (course pass mark: 30%) |
+| **Score** | **90% (18/20)** on the course's GAIA Level 1 set (pass mark: 30%) |
 | **Brain** | `@cf/openai/gpt-oss-120b` (free tier) |
 | **Vision** | `@cf/google/gemma-4-26b-a4b-it` |
 | **Speech** | `@cf/openai/whisper-large-v3-turbo` |
